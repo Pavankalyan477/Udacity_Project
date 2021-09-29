@@ -4,25 +4,36 @@ const Signup = require("../models/signup.model");
 
 const router = express.Router();
 
+
+router.get("/signup", async (req, res) => {
+    const signup = await Signup.find();
+    return res.status(200).send({ signup });
+})
+
 //creating api for index page view
-router.get("/index", async (req, res) => {
-    const user = await User.find().lean().exec();
-    return res.render("index.ejs")
+router.get("/signup/get", async (req, res) => {
+    const signup = await Signup.find().lean().exec();
+    //console.log("sign",signup)
+    return res.render('../views/signup.ejs',{
+        signup:signup
+    })
+})
+router.post("/signup", async (req, res) => {
+    const signup = await Signup({First_Name: req.body.First_Name, Last_Name: req.body.Last_Name,Email_Address: req.body.mail, Password: req.body.pass});
+    signup.save(function(err) {
+        if(err) {
+            console.log("Something went wrong");
+        }
+        else {
+            console.log("Successfully added a user");
+            res.redirect("/signup/get");
+        }
+    });
+    console.log("sign",signup)
+    //res.redirect("/")
+   // return res.status(201).send({ signup });
 })
 
-router.get("/data", async (req, res) => {
-    const user = await User.find().lean().exec();
-    return res.render("data.ejs")
-})
 
-router.get("/web", async (req, res) => {
-    const user = await User.find().lean().exec();
-    return res.render("web.ejs")
-})
-
-router.get("/product", async (req, res) => {
-    const user = await User.find().lean().exec();
-    return res.render("product.ejs")
-})
 
 module.exports = router
