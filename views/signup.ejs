@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/signup.css">
+</head>
+
+<body>
+  <div id="header2">
+    <img src="https://payment.udacity.com/static/media/logo.ccbc74e4.svg" alt="udacity" class="img1"/>
+</div>
+  <div>
+    <div class="form">
+      <div class="tab-header">
+        <div class="active">SIGN UP</div>
+        <div id="ready">SIGN IN</div>
+      </div>
+      <form onsubmit="data(event)" id="data">
+        <div class="tab-content">
+          <div class="tab-body active">
+            <p class="title">Create Your Accout</p>
+            <p>Build skills for today, tomorrow, and beyond.
+              <br>
+              <br>
+            Education to future-proof your career.</p>
+            <br>
+            <div>
+              <button class="btn2"><img
+                    src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" /><p>Sign Up
+                  with
+                  Google </p></button>
+              <button class="btn2"><img
+                    src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" /><p>Sign
+                  Up
+                  with
+                  Facebook</p></button>
+            </div>
+            <h4>Or</h4>
+            <form>
+            <div class="form-element">
+              <input type="text" id="first" placeholder="First_Name">
+              <p id="mess"></p>
+            </div>
+            <div class="form-element">
+              <input type="text" id="last" placeholder="Last_Name">
+              <p id="mess1"></p>
+            </div>
+            <div class="form-element">
+              <input type="email" id="mail" placeholder="Email_Address">
+              <p id="mess2"></p>
+            </div>
+            <div class="form-element">
+              <input type="password" id="pswd" placeholder="Password">
+              <p id="mess3"></p>
+            </div>
+            <p>By clicking Sign Up, you agree to our Terms of Use and our Privacy Policy.</p>
+            <div id="continue" class="form-element">
+              <button  class="btn1" type="submit">Sign Up</button>
+            </div>
+            <div id="signedup"></div>
+          </div>
+        </form>
+
+
+          <form onsubmit="data1(event1)" id="data1"></form>
+          <div class="tab-body">
+            <p class="title">Sign in to Your Accout</p>
+            <p>Build skills for today, tomorrow, and beyond.<br><br>Education to future-proof your career.</p>
+            <br>
+            <div>
+              <button class="btn2"><img
+                    src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" /><p>Sign Up
+                  with
+                  Google </p></button>
+              <button class="btn2"><img
+                    src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" /><p>Sign
+                  Up
+                  with
+                  Facebook</p></button>
+            </div>
+            <br>
+            <h4>Or</h4>
+            <br>
+            <div class="form-element">
+              <input id="email" type="text" placeholder="Email Address">
+            </div>
+            <div class="form-element">
+              <input type="password" id="pass" placeholder="Password">
+            </div>
+            <p>By clicking Sign in, you agree to our Terms of Use and our Privacy Policy.</p>
+            <div class="form-element">
+              <button class="btn1"onclick="fom(event)">Sign In</button>
+            </div>
+            <p>Forgot Password</p>
+            <h4>Or</h4>
+            <p>Sign in with Your Organization</p>
+            <div id="signedin"></div>
+          </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../scripts/signup.js"></script>
