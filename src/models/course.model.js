@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //creating fake schema
-const userSchema = new mongoose.Schema({
+const courseSchema = new mongoose.Schema({
     "Heading_Banner": { type: String, required: true },
     "Description_Banner": { type: String, required: true },
     "Estimated_Time": { type: String, required: true },
@@ -23,5 +23,5 @@ const userSchema = new mongoose.Schema({
     "cost_per_month": { type: Number, required: true }
 })
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("course", courseSchema);
 
