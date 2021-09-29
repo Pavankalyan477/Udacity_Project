@@ -70,8 +70,8 @@
           </div>
       </form>
 
-
-      <form action="/signin" method="POST" id="data1">
+      <form id="data1"></form>
+      <!-- <form action="/signin" method="POST" id="data1"> -->
         <div class="tab-body">
           <p class="title">Sign in to Your Accout</p>
           <p>Build skills for today, tomorrow, and beyond.<br><br>Education to future-proof your career.</p>
@@ -92,6 +92,7 @@
           <br>
           <h4>Or</h4>
           <br>
+          <form  action="/signin" method="POST"  >
           <div class="form-element">
             <input id="email" type="text" placeholder="Email Address" name="mail">
           </div>
@@ -100,15 +101,16 @@
           </div>
           <p>By clicking Sign in, you agree to our Terms of Use and our Privacy Policy.</p>
           <div class="form-element">
-            <button class="btn1">Sign In</button>
+            <button class="btn1" type="submit">Sign In</button>
           </div>
           <p>Forgot Password</p>
           <h4>Or</h4>
           <p>Sign in with Your Organization</p>
           <div id="signedin"></div>
+        </form>
         </div>
-      </form>
     </div>
+    
   </div>
 </body>
 

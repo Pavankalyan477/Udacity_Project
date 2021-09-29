@@ -4,6 +4,7 @@ const connect = require("./configs/db");
 
 const courseController = require("./controllers/course.controller");
 const signupController = require("./controllers/signup.controller");
+const signinController = require("./controllers/signin.controller");
 
 const app = express();
 app.use(express.json());
@@ -19,6 +20,7 @@ app.use(express.static("public"));
 //calling api
 app.use("/", courseController);
 app.use("/", signupController);
+app.use("/", signinController);
 
 
 app.listen(3000, async () => {
