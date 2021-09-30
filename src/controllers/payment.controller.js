@@ -4,7 +4,6 @@ const Payment = require("../models/payment.model");
 
 const router = express.Router();
 
-
 router.get("/payment", async (req, res) => {
     const payment = await Payment.find();
     return res.status(200).send({ payment });
