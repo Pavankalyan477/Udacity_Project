@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/orderdetails.css">
+    <link rel="stylesheet" href="../css/orderdetail.css">
 </head>
 <body>
     <div id="whole">
@@ -27,7 +27,7 @@
                 <div class="text6">
                     <h2><%= course.Estimated_Time %></h2>
                 </div>
-                <div class="firstrow"><div>List Price</div><div class="">$1,596 USD</div></div>
+                <div class="firstrow"><div>List Price</div><div class="">$<%=order.cost %></div></div>
                 <div class="firstrow"><div>15% Pre-paid Discount</div><div class="colred">-$240 USD</div></div>
                 <div class="line"></div>
                     <div class="total"><div>Total</div><div class="">$1,356 USD</div></div>
