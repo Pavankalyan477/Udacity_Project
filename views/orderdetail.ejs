@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/orderdetails.css">
+    <link rel="stylesheet" href="/css/orderdetail.css">
 </head>
 <body>
     <div id="whole">
@@ -22,12 +22,12 @@
                     <h1>Order Details</h1>
                 </div>
                 <div class="text5">
-                    <h2>Full Stack Web Developer Nanodegree Program</h2>
+                    <h2><%= course.Heading_Banner %></h2>
                 </div>
                 <div class="text6">
-                    <h2>4 months access</h2>
+                    <h2><%= course.Estimated_Time %></h2>
                 </div>
-                <div class="firstrow"><div>List Price</div><div class="">$1,596 USD</div></div>
+                <div class="firstrow"><div>List Price</div><div class="">$<%=order.cost %></div></div>
                 <div class="firstrow"><div>15% Pre-paid Discount</div><div class="colred">-$240 USD</div></div>
                 <div class="line"></div>
                     <div class="total"><div>Total</div><div class="">$1,356 USD</div></div>
@@ -76,8 +76,8 @@
 </body>
 </html>
 <script>
-    document.querySelector("#funbtn2")
-        .addEventListener('click',()=>{
-       window.location.href="payment.html"
-        })
+    // document.querySelector("#funbtn2")
+    //     .addEventListener('click',()=>{
+    //    window.location.href="payment.html"
+    //     })
 </script>
