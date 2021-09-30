@@ -25,3 +25,9 @@ const courseSchema = new mongoose.Schema({
 
 module.exports = mongoose.model("course", courseSchema);
 
+
+/*
+const crcSchema=new mongoose.Schema({
+    course:{type:mongoose.Schema.Types.ObjectId,ref:"course",required:true}
+})
+*/
