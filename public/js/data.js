@@ -1,5 +1,5 @@
 function buy(a) {
-    window.location.href = "/"
+    window.location.href = `/course/${a}/order`;
 }
 
 // Set the date we're counting down to

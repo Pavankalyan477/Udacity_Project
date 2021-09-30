@@ -20,7 +20,7 @@ router.get("/course/:id/order", async (req, res) => {
 //creating api for index page view
 router.get("/order/get", async (req, res) => {
     const order = await Order.find().lean().exec();
-    return res.render('../views/ordersdetail.ejs',{
+    return res.render('../views/orderdetail.ejs' ,{
         order:order
     })
 })
