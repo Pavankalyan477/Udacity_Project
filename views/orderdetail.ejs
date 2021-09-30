@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,76 +8,96 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/orderdetail.css">
 </head>
+
 <body>
     <div id="whole">
         <div id="header2">
-            <img src="https://payment.udacity.com/static/media/logo.ccbc74e4.svg" alt="udacity" class="img1"/>
+            <img src="https://payment.udacity.com/static/media/logo.ccbc74e4.svg" alt="udacity" class="img1" />
         </div>
-            <div id="ordet">
-                    <div class="layconst2">
-                        <p><span>Get Started </span><span class="bold"> >Orders Details</span><span>> Payment Method</span><span>> Review Your Order</span></p>
+        <div id="ordet">
+            <div class="layconst2">
+                <p><span>Get Started </span><span class="bold"> >Orders Details</span><span>> Payment
+                        Method</span><span>> Review Your Order</span></p>
             </div>
             <div id="content">
                 <div class="text4">
                     <h1>Order Details</h1>
                 </div>
                 <div class="text5">
-                    <h2><%= order.Heading_Banner %></h2>
+                    <h2>
+                        <%= order.Heading_Banner %>
+                    </h2>
                 </div>
                 <div class="text6">
-                    <h2><%= order.Estimated_Time %></h2>
+                    <h2>
+                        <%= order.Estimated_Time %>
+                    </h2>
                 </div>
-                <div class="firstrow"><div>List Price</div><div class="">$<%=order.cost%>USD</div></div>
-                <div class="firstrow"><div>15% Pre-paid Discount</div><div class="colred">-$240 USD</div></div>
+                <div class="firstrow">
+                    <div>List Price</div>
+                    <div class="">$<%=order.cost%>USD</div>
+                </div>
+                <div class="firstrow">
+                    <div>15% Pre-paid Discount</div>
+                    <div class="colred">-$240 USD</div>
+                </div>
                 <div class="line"></div>
-                    <div class="total"><div>Total</div><div class="">$1,356 USD</div></div>
-                    <div class="coupan">I have a coupon code</div>
-                    <div class="btn2">
-                        <button id="funbtn2"><a href="/payment.ejs">Review Your Order</a></button>
-                    </div>
+                <div class="total">
+                    <div>Total</div>
+                    <div class="">$1,356 USD</div>
                 </div>
-                <div class="cont1">
-                    <div class="text-content">
-                        <h3>Get the Udacity Difference</h3>
-                        <h4>Only Udacity has all the critical factors to deliver real results.</h4>
-                    </div>
-                    <div id="allboxes">
+                <div class="coupan">I have a coupon code</div>
+                <div class="btn2">
+                    <button id="funbtn2" onclick="trigger(<%=JSON.stringify(order._id)%>)">Review Your Order</button>
+                </div>
+            </div>
+            <div class="cont1">
+                <div class="text-content">
+                    <h3>Get the Udacity Difference</h3>
+                    <h4>Only Udacity has all the critical factors to deliver real results.</h4>
+                </div>
+                <div id="allboxes">
                     <div>
                         <div class="box">
-                            <div class="imgres"><img src="https://payment.udacity.com/static/media/blue-brain.9cb5e856.svg"></div>
-                            <span>Quality curriculum teaches real,<br/> employable skills</span>
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/blue-brain.9cb5e856.svg"></div>
+                            <span>Quality curriculum teaches real,<br /> employable skills</span>
                         </div>
                     </div>
                     <div>
                         <div class="box">
-                            <div class="imgres"><img src="https://payment.udacity.com/static/media/green-head.3f52df58.svg"></div>
-                            <span>Flexible, online platform lets you<br/> learn on your schedule</span>
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/green-head.3f52df58.svg"></div>
+                            <span>Flexible, online platform lets you<br /> learn on your schedule</span>
                         </div>
                     </div>
-                    <div >
+                    <div>
                         <div class="box">
-                            <div class="imgres"><img src="https://payment.udacity.com/static/media/red-console.b6824ed5.svg"></div>
-                            <span>Real-world projects offer active,<br/>hands-on learning
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/red-console.b6824ed5.svg"></div>
+                            <span>Real-world projects offer active,<br />hands-on learning
                             </span>
                         </div>
                     </div>
                     <div>
                         <div class="box">
-                            <div class="imgres"><img src="https://payment.udacity.com/static/media/purple-career.673cbaea.svg"></div>
-                            <span>24/7 access to technical mentors<br/> provides the help you need,<br/> when you need it</span>
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/purple-career.673cbaea.svg"></div>
+                            <span>24/7 access to technical mentors<br /> provides the help you need,<br /> when you need
+                                it</span>
                         </div>
                     </div>
                 </div>
-                    
+
             </div>
-           
-            </div>
+
+        </div>
     </div>
 </body>
+
 </html>
 <script>
-    // document.querySelector("#funbtn2")
-    //     .addEventListener('click',()=>{
-    //    window.location.href="payment.html"
-    //     })
+    function trigger(link) {
+        window.location.href = `/payment/${link}`;
+    }
 </script>
