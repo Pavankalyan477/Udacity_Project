@@ -19,8 +19,9 @@ router.get("/course/:id/order", async (req, res) => {
 
 //creating api for index page view
 router.get("/order/get", async (req, res) => {
-    const order = await Order.find().lean().exec();
-    return res.render('../views/orderdetail.ejs' ,{
+    const order = await Course.find().lean().exec();
+    //console.log("sign",signup)
+    return res.render('orderdetail.ejs',{
         order:order
     })
 })
