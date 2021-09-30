@@ -241,9 +241,10 @@
                                 <div class="pricetag">
                                     <p class="bigger"><span>$<%= course.cost %></span><span class="smaller">$<%=
                                                 course.cost_per_month %> per month</span></p>
-                                    <button class="btn12"><a class="am" href="/">ENROLL
-                                            <button class="btn12"><a class="am" href="orderdetail.ejs">ENROLL
-                                                    NOW</a></button>
+                                    <!-- <button class="btn12"><a class="am" href="/">ENROLL -->
+                                        <button class="btn12"
+                                        onclick="buy(<%=JSON.stringify(course._id)%>)">ENROLL
+                                        NOW</button>
                                             <div class="text25">
                                                 <p>Start learning today! Switch to the monthly</p>
                                                 <p>price afterwards if more time is needed.</p>
@@ -263,9 +264,10 @@
                                 <div class="pricetag2">
                                     <p class="bigger2"><span>$<%= course.cost %></span><span class="smaller2">$<%=
                                                 course.cost_per_month %> per month</span></p>
-                                    <button class="btn13"><a class="am" href="/">ENROLL
-                                            <button class="btn13"><a class="am" href="orderdetail.ejs">ENROLL
-                                                    NOW</a></button>
+                                    <!-- <button class="btn13"><a class="am" href="/">ENROLL -->
+                                        <button class="btn13"
+                                        onclick="buy(<%=JSON.stringify(course._id)%>)">ENROLL
+                                        NOW</button>
                                 </div>
                             </div>
                         </div>

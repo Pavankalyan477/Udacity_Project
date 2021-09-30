@@ -14,6 +14,10 @@
 .img1 {
     width: 15%;
 }
+.am{
+    text-decoration: none;
+    color: white;
+}
 
 #const {
     max-width: 750px;
