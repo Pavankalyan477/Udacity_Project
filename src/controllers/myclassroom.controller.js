@@ -11,7 +11,7 @@ router.get("/myclassroom", async (req, res) => {
     return res.status(200).send({ myclassroom });
 })
 
-router.get("/course/:id/myclassroom", async (req, res) => {
+router.get("/myclassroom/get", async (req, res) => {
     const myclassroom = await Course.findById(req.params.id);
     return res.render("myclassroom.ejs", { myclassroom });
 })
@@ -20,7 +20,7 @@ router.get("/course/:id/myclassroom", async (req, res) => {
 //creating api for index page view
 router.get("/myclassroom/get", async (req, res) => {
     const myclassroom = await Myclassroom.find().lean().exec();
-    return res.render('../views/myclassroom.ejs',{
+    return res.render('myclassroom.ejs',{
         myclassroom:myclassroom
     })
 })
