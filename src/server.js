@@ -20,6 +20,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 
+
 //calling api
 app.use("/", courseController);
 app.use("/", signupController);
