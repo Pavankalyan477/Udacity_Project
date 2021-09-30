@@ -20,7 +20,10 @@ const courseSchema = new mongoose.Schema({
     "h4": { type: String, required: true },
     "h4_des": { type: String, required: true },
     "cost": { type: Number, required: true },
-    "cost_per_month": { type: Number, required: true }
+    "cost_per_month": { type: Number, required: true },
+    "image": { type: String, required: false }
+}, {
+    versionKey: false
 })
 
 module.exports = mongoose.model("course", courseSchema);
