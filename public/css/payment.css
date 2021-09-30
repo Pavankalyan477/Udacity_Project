@@ -1,0 +1,207 @@
+#header {
+    height: 72px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
+    margin: 0 0 32px;
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+}
+
+.img1 {
+    width: 15%;
+}
+
+#const {
+    max-width: 750px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.layconst {
+    width: 650px;
+    text-align: center;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 1rem;
+    height: fit-content;
+    margin-bottom: 40px;
+}
+
+.layconst>p {
+    font-size: 17px;
+    color: teal;
+}
+
+.bold {
+    font-weight: 700;
+    color: rgb(1, 95, 95);
+}
+
+.text1 {
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.text2 {
+    margin: auto;
+    width: fit-content;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+#tabbar {
+    width: 750px;
+    margin: auto;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabbar .btn2 {
+    width: 30%;
+    margin-top: 10px;
+    height: 50px;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    font-weight: 550;
+    border: none;
+    background-color: white;
+    background:
+        linear-gradient(100deg, rgb(52, 143, 247), rgb(52, 143, 247)) left bottom/0 4px no-repeat,
+        linear-gradient(100deg, rgb(52, 143, 247), rgb(52, 143, 247)) left bottom/90% 4px no-repeat,
+        linear-gradient(100deg, #ffffff, #ffffff) left bottom/90% no-repeat;
+}
+
+#tabbar button {
+    width: 30%;
+    margin-top: 10px;
+    height: 50px;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    font-weight: 550;
+    border: none;
+    background-color: white;
+    background:
+        linear-gradient(90deg, #222, #222) left bottom/0 3px no-repeat,
+        linear-gradient(90deg, #ccc, #ccc) left bottom/90% 3px no-repeat,
+        linear-gradient(90deg, #fafafa, #fafafa) left bottom/90% no-repeat;
+}
+
+#tabbar button img {
+    height: 27px;
+    background-color: none;
+    margin: auto;
+}
+
+#form {
+    margin: auto;
+    align-items: center;
+    width: 600px;
+    justify-content: center;
+}
+
+.text3 {
+    font-size: 17px;
+    margin-top: 20px;
+    font-weight: 550;
+    text-align: left;
+    margin-bottom: 25px;
+    font-family: sans-serif;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 525;
+}
+
+input {
+    width: 98.5%;
+    height: 45px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+#country {
+    width: 98.5%;
+    height: 45px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+#mon {
+    width: 55px;
+    height: 40px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+#year {
+    width: 55px;
+    height: 40px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+#cvv {
+    width: 50px;
+    height: 40px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.btn button {
+    text-align: center;
+    background-color: #017a9b;
+    color: white;
+    border: none;
+    font-size: 0.90rem;
+    font-weight: 525;
+    /* letter-spacing: 1.5px; */
+    text-align: center;
+    height: 3.2rem;
+    padding: 5px 30px;
+    border: transparent;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.btn {
+    margin: auto;
+    width: 190px;
+    margin-top: 10px;
+    /* border:1px solid black; */
+}
