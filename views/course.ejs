@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
     @import url("../css/style.css");
 </style>
@@ -5,17 +6,21 @@
 <body>
     <%- include('partials/navbar') %>
 
-        <div>
+        <div class="c0">
             <div class="ca">
+                <div class="ca0">NANODEGREE PROGRAM</div>
                 <div class="ca1">
                     <%= course.Heading_Banner %>
                 </div>
                 <div class="ca2">
                     <%= course.Description_Banner %>
                 </div>
-                <div class="ca3"><button onclick="buy('dataengineer')"><a class="am" href="">ENROLL
-                            NOW</a></button>
+                <!-- <div class="ca3"><button onclick="buy('dataengineer')"><a class="am" href="">ENROLL
+                            NOW</a></button> -->
+                <div class="ca3"><button>DOWNLOAD SYLLABUS</button><button onclick="buy('dataengineer')">ENROLL
+                        NOW</button>
                 </div>
+                <div id="timer"></div>
             </div>
             <div class="cb">
                 <div class="cb1">
@@ -24,12 +29,14 @@
                         <%= course.Estimated_Time %>
                     </div>
                 </div>
+                <hr>
                 <div class="cb1">
                     <div class="cb10">ENROLL BY</div>
                     <div class="cb11">
                         <%= course.Enroll_By %>
                     </div>
                 </div>
+                <hr>
                 <div class="cb1">
                     <div class="cb10">PREREQUISTS</div>
                     <div class="cb11">
