@@ -9,6 +9,13 @@ router.get("/payment", async (req, res) => {
     const payment = await Payment.find();
     return res.status(200).send({ payment });
 })
+router.get("/course/:id/payment", async (req, res) => {
+    const payment = await Payment.findById(req.params.id);
+    return res.render("payment.ejs", { payment });
+})
+
+
+
 
 //creating api for index page view
 router.get("/payment/get", async (req, res) => {
