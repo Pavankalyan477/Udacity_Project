@@ -11,8 +11,8 @@
 
 <body>
   <div id="header2">
-    <img src="https://payment.udacity.com/static/media/logo.ccbc74e4.svg" alt="udacity" class="img1"/>
-</div>
+    <img src="https://payment.udacity.com/static/media/logo.ccbc74e4.svg" alt="udacity" class="img1" />
+  </div>
   <div>
     <div class="form">
       <div class="tab-header">
@@ -20,28 +20,31 @@
         <div id="ready">SIGN IN</div>
       </div>
       <!-- <form onsubmit="data(event)" id="data"> -->
-        <form action="/signup" method="POST" id="data">
+      <form action="/signup" method="POST" id="data">
         <div class="tab-content">
           <div class="tab-body active">
             <p class="title">Create Your Accout</p>
             <p>Build skills for today, tomorrow, and beyond.
               <br>
               <br>
-            Education to future-proof your career.</p>
+              Education to future-proof your career.
+            </p>
             <br>
             <div>
-              <button class="btn2"><img
-                    src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" /><p>Sign Up
+              <button class="btn2"><img src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" />
+                <p>Sign Up
                   with
-                  Google </p></button>
-              <button class="btn2"><img
-                    src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" /><p>Sign
+                  Google </p>
+              </button>
+              <button class="btn2"><img src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" />
+                <p>Sign
                   Up
                   with
-                  Facebook</p></button>
+                  Facebook</p>
+              </button>
             </div>
             <h4>Or</h4>
-            
+
             <div class="form-element">
               <input type="text" id="first" placeholder="First_Name" name="First_Name">
               <p id="mess"></p>
@@ -61,62 +64,67 @@
             <p>By clicking Sign Up, you agree to our Terms of Use and our Privacy Policy.</p>
             <div id="continue" class="form-element">
               <!-- <input  class="btn1" type="submit" value="Sign Up"> -->
-              <button  class="btn1" type="submit" >SIGNUP</button>
+              <button class="btn1" type="submit">SIGNUP</button>
             </div>
             <div id="signedup"></div>
           </div>
-        </form>
+      </form>
 
-
-          <form onsubmit="data1(event1)" id="data1"></form>
-          <div class="tab-body">
-            <p class="title">Sign in to Your Accout</p>
-            <p>Build skills for today, tomorrow, and beyond.<br><br>Education to future-proof your career.</p>
-            <br>
-            <div>
-              <button class="btn2"><img
-                    src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" /><p>Sign Up
-                  with
-                  Google </p></button>
-              <button class="btn2"><img
-                    src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" /><p>Sign
-                  Up
-                  with
-                  Facebook</p></button>
-            </div>
-            <br>
-            <h4>Or</h4>
-            <br>
-            <div class="form-element">
-              <input id="email" type="text" placeholder="Email Address">
-            </div>
-            <div class="form-element">
-              <input type="password" id="pass" placeholder="Password">
-            </div>
-            <p>By clicking Sign in, you agree to our Terms of Use and our Privacy Policy.</p>
-            <div class="form-element">
-              <button class="btn1"onclick="fom(event)">Sign In</button>
-            </div>
-            <p>Forgot Password</p>
-            <h4>Or</h4>
-            <p>Sign in with Your Organization</p>
-            <div id="signedin"></div>
+      <form id="data1"></form>
+      <!-- <form action="/signin" method="POST" id="data1"> -->
+        <div class="tab-body">
+          <p class="title">Sign in to Your Accout</p>
+          <p>Build skills for today, tomorrow, and beyond.<br><br>Education to future-proof your career.</p>
+          <br>
+          <div>
+            <button class="btn2"><img src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" />
+              <p>Sign Up
+                with
+                Google </p>
+            </button>
+            <button class="btn2"><img src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" />
+              <p>Sign
+                Up
+                with
+                Facebook</p>
+            </button>
           </div>
+          <br>
+          <h4>Or</h4>
+          <br>
+          <form  action="/signin" method="POST"  >
+          <div class="form-element">
+            <input id="email" type="text" placeholder="Email Address" name="mail">
+          </div>
+          <div class="form-element">
+            <input type="password" id="pass" placeholder="Password" name="pass">
+          </div>
+          <p>By clicking Sign in, you agree to our Terms of Use and our Privacy Policy.</p>
+          <div class="form-element">
+            <button class="btn1" type="submit">Sign In</button>
+          </div>
+          <p>Forgot Password</p>
+          <h4>Or</h4>
+          <p>Sign in with Your Organization</p>
+          <div id="signedin"></div>
+        </form>
         </div>
     </div>
+    
+  </div>
 </body>
 
 </html>
 <script>
   let tabPanes = document.getElementsByClassName("tab-header")[0].getElementsByTagName("div");
 
-for (let i = 0; i < tabPanes.length; i++) {
-  tabPanes[i].addEventListener("click", function () {
-    document.getElementsByClassName("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
-    tabPanes[i].classList.add("active");
+  for (let i = 0; i < tabPanes.length; i++) {
+    tabPanes[i].addEventListener("click", function () {
+      document.getElementsByClassName("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
+      tabPanes[i].classList.add("active");
 
-    document.getElementsByClassName("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
-    document.getElementsByClassName("tab-content")[0].getElementsByClassName("tab-body")[i].classList.add("active");
-  });
-}
+      document.getElementsByClassName("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
+      document.getElementsByClassName("tab-content")[0].getElementsByClassName("tab-body")[i].classList.add("active");
+    });
+  }
 </script>

@@ -29,7 +29,7 @@ router.post("/signup", async (req, res) => {
             res.redirect("/signup/get");
         }
     });
-    console.log("sign",signup)
+   // console.log("sign",signup)
     //res.redirect("/")
    // return res.status(201).send({ signup });
 })

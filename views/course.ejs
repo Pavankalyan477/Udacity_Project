@@ -1,0 +1,380 @@
+<style>
+    @import url("../css/style.css");
+</style>
+
+<body>
+    <%- include('partials/navbar') %>
+
+        <div>
+            <div class="ca">
+                <div class="ca1">
+                    <%= course.Heading_Banner %>
+                </div>
+                <div class="ca2">
+                    <%= course.Description_Banner %>
+                </div>
+                <div class="ca3"><button onclick="buy('dataengineer')"><a class="am" href="#backimg">ENROLL
+                            NOW</a></button>
+                </div>
+            </div>
+            <div class="cb">
+                <div class="cb1">
+                    <div class="cb10">ESTIMATED TIME</div>
+                    <div class="cb11">
+                        <%= course.Estimated_Time %>
+                    </div>
+                </div>
+                <div class="cb1">
+                    <div class="cb10">ENROLL BY</div>
+                    <div class="cb11">
+                        <%= course.Enroll_By %>
+                    </div>
+                </div>
+                <div class="cb1">
+                    <div class="cb10">PREREQUISTS</div>
+                    <div class="cb11">
+                        <%= course.Prequists %>
+                    </div>
+                </div>
+            </div>
+            <div class="cc">
+                <div class="cc1">BUILT IN COLLABORATION WITH</div>
+                <div class="cc2"><img
+                        src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/1qPe4pxWewKFo4zBMTrbB0/244eed2a474f49ddff888fdddab905a1/logo-color-insight.svg" />
+                </div>
+            </div>
+
+
+            <div id="full-content101">
+                <div class="cont-don">
+                    <p class="what101">What You Will Learn</p>
+                    <button class="btn-don"><a
+                            href="https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Full+Stack+-+nd0044+-+syllabus.pdf">DOWNLOAD
+                            SYLLABUS</a></button>
+                </div>
+                <div id="box-shadow101">
+                    <div class="pic1">
+                        <div class="top-get101">
+                            <div class="fullstack-cont">
+                                <div class="fullstack-det">
+                                    <p>
+                                        <%= course.Heading %>
+                                    </p>
+                                </div>
+                                <div class="parra">
+                                    <p>
+                                        <%= course.Description %>
+                                    </p>
+                                </div>
+                                <div class="related">Related Nanodegree</div>
+                                <hr />
+                                <div class="botcont101">
+                                    <div class="bluecont">-Hide Details</div>
+                                    <div class="blackcont">
+                                        <%= course.Estimated_Time %> to complete
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-img101"><img
+                                src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/273mc9O02LTqyMEt024VYZ/3a62e00da4bd2837d74f5cd4776a8f2c/syllabus.jpg"
+                                alt=""></div>
+
+                    </div>
+
+                    <div class="total-cont101">
+                        <div class="opt-cont101">
+                            <div class="excep">
+                                <%= course.head %>
+                            </div>
+                            <div class="parra">
+                                <%= course.des %>
+                            </div>
+                            <div>
+
+                                <p class="fullli">
+                                    <%= course.h1 %>
+                                </p>
+                                <div class="parra">
+                                    <%= course.h1_des %>
+                                </div>
+                                <button class="colr">
+                                    <img
+                                        src="https://www.udacity.com/assets/iridium/images/nanodegree-overview/shared/degree-syllabus/icon-project.svg">
+                                    <span>Design a value</span>
+                                </button>
+                                <p class="fullli">
+                                    <%= course.h2 %>
+                                </p>
+                                <div class="parra">
+                                    <%= course.h2_des %>
+                                </div>
+                                <button class="colr">
+                                    <img
+                                        src="https://www.udacity.com/assets/iridium/images/nanodegree-overview/shared/degree-syllabus/icon-project.svg">
+                                    <span class="colr">Trivia Api</span>
+                                </button>
+                                <p class="fullli">
+                                    <%= course.h3 %>
+                                </p>
+                                <div class="parra">
+                                    <%= course.h3_des %>
+                                </div>
+                                <button class="colr">
+                                    <img
+                                        src="https://www.udacity.com/assets/iridium/images/nanodegree-overview/shared/degree-syllabus/icon-project.svg">
+                                    <span>Coffee Shop Full Stack</span>
+                                </button>
+                                <p class="fullli">
+                                    <%= course.h4 %>
+                                </p>
+                                <div class="parra">
+                                    <%= course.h4_des %>
+                                </div>
+                                <button class="colr">
+                                    <img
+                                        src="https://www.udacity.com/assets/iridium/images/nanodegree-overview/shared/degree-syllabus/icon-project.svg">
+                                    <span>Diploy A Flask</span>
+                                </button>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box-opt-cont101">
+                            <div class="firstbx">
+                                <div><img src="https://www.iconsdb.com/icons/preview/caribbean-blue/literature-xxl.png"
+                                        class="imgstyle"></div>
+                                <div class="parra">NEED TO PREPARE?</div>
+                                <div class="parra">We offer a number of Nanodegree programs and free courses that can
+                                    help
+                                    you prepare:</div>
+                                <div>
+
+                                    <p class="parra">Introduction to Programming</p>
+                                    <p class="parra"> Introduction to Python Programming</p>
+                                    <p class="parra">Introduction to Algorithm</p>
+                                    <p class="parra">Control with Git</p>
+                                    <p class="parra">Intro to HTML CSS</p>
+
+                                </div>
+
+                            </div>
+                            <div class="secondbx">
+                                <div class="cutsecond">
+                                    <div>
+                                        <img src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/N68k8KLxd23t4tmL0CvFv/33a2840bfb5aa3996f58268bad565fb5/card-icon-arrow.svg"
+                                            class="imgstyle2">
+                                    </div>
+                                    <div class="textstyle2">The Bureau of Labor Statistics projects over <span
+                                            class="textstyle2"> 13% job growth </span>for web developers over the next
+                                        5+
+                                        years.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <div id="backimg">
+                <div class="box-cont">
+                    <div class="boxcont1">
+                        <div class="bor-for-box">
+                            <div class="get-stat">GET STARTED WITH</div>
+                            <div class="full-stack">Data Engineer</div>
+                            <div class="learn">
+                                <img
+                                    src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/1xzMLXzq9MHC9kK9msyF1X/31bc93b2538c42e7b4f707e34cbbd2cc/book-open.svg">
+                                <p>LEARN</p>
+                            </div>
+                            <div class="text10">Learn to design and develop powerful modern web applications that form
+                                the
+                                foundation for the apps, websites, and systems that people and businesses use every day.
+                            </div>
+                            <div class="learn">
+                                <img
+                                    src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/1LzQygAn5VCT7CDcUV6ZG2/203d0b2416c97f58213d18051fd683e8/Clock.svg">
+                                <p>AVERAGE TIME</p>
+                            </div>
+                            <div class="learn">On average, successful students take 4 months to complete this program.
+                            </div>
+                            <div class="learn">
+                                <img
+                                    src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/5DMJMZE0m1YzXEkP4p2rE8/6063a3d2df9d4644afd504cf5af1fe37/notepad.svg">
+                                <p>BENEFITS INCLUDE</p>
+                                <!-- <ul>
+                                   <li>Real-world projects from industry experts</li> 
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxcont2">
+                        <div class="boxcont3">
+                            <div class="boxcont-bor">
+                                <div class="new-per">
+                                    <img
+                                        src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/6YeTqhBuMSkvinG9QLWbY6/8d7a9991079fbd4ea242d7217acc0502/red_color_tag.png">
+                                    <p>NEW PERSONALIZED DISCOUNTS!</p>
+                                </div>
+                                <div class="save">
+                                    <p>Save up to $1,526!</p>
+                                </div>
+                                <button class="btn10">LEARN MORE</button>
+                            </div>
+                        </div>
+                        <div class="boxcont4">
+                            <div class="boxcont4-bor">
+                                <div class="monfor">4 MONTHS ACCESS</div>
+                                <div class="pricetag">
+                                    <p class="bigger"><span>$<%= course.cost %></span><span class="smaller">$<%=
+                                                course.cost_per_month %> per month</span></p>
+                                    <button class="btn12"><a class="am" href="orderdetails1.html">ENROLL
+                                            NOW</a></button>
+                                    <div class="text25">
+                                        <p>Start learning today! Switch to the monthly</p>
+                                        <p>price afterwards if more time is needed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="bottom-tag">
+                                <img src="https://cdn-assets.affirm.com/images/black_logo-transparent_bg.png" alt="">
+                                <p class="text26">Buy with payments as low as $113 per<br />month at 0% APR.</p>
+                            </div>
+                            <button class="btn9">LEARN MORE</button>
+                        </div>
+                        <div class="boxcont5">
+                            <div class="boxcont5-bor">
+                                <div class="monfor2">PAY AS YOU GO</div>
+                                <div class="pricetag2">
+                                    <p class="bigger2"><span>$<%= course.cost %></span><span class="smaller2">$<%=
+                                                course.cost_per_month %> per month</span></p>
+                                    <button class="btn13"><a class="am" href="orderdetails1.html">ENROLL
+                                            NOW</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div>
+                <div id=footer>
+                    <div id="imagelogolay">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/udacity-logo-png-transparent.png"
+                            id="imglogo">
+                    </div>
+                    <div id="whole-body-content">
+                        <div class="content5">
+                            <p><span class="boldtext">FEATURED PROGRAMS</span><br />
+
+                                Business Analytics<br />
+                                SQL<br />
+                                Data Engineer<br />
+                                Data Analyst<br />
+                                Intro to Programming<br />
+                                Digital Marketing<br />
+                                Self Driving Car Engineer</p>
+                        </div>
+                        <div class="content5">
+                            <p><span class="boldtext">ONLY AT UDACITY</span><br />
+
+                                Artificial Intelligence<br />
+                                Deep Learning<br />
+                                Digital Marketing<br />
+                                Flying Car and Autonomous Flight Engineer<br />
+                                Intro to Self-Driving Cars<br />
+                                Machine Learning Engineer<br />
+                                Robotics Software Engineer</p>
+
+                            <p><span class="boldtext">UDACITY SCHOOLS</span><br />
+
+                                School of Artificial Intelligence<br />
+                                School of Autonomous Systems<br />
+                                School of Business<br />
+                                School of Cloud Computing<br />
+                                School of Cybersecurity<br />
+                                School of Data Science<br />
+                                School of Programming<br />
+                                School of Product Management<br />
+                            </p>
+                        </div>
+                        <div class="content5">
+                            <p><span class="boldtext">ENTERPRISE</span><br />
+
+                                Udacity for Enterprise<br />
+                                Digital Transformation with Udacity<br />
+                                Artificial Intelligence for Enterprise<br />
+                                Cybersecurity for Enterprise<br />
+                                Data Science for Enterprise<br />
+                                Udacity for Financial Services<br />
+                                Corporate Social Responsibility<br />
+                                Enterprise Resource Center<br />
+                            </p>
+                            <p><span class="boldtext">GOVERNMENT</span><br />
+
+                                Udacity for Government
+                            </p>
+                        </div>
+                        <div class="content5">
+                            <p><span class="boldtext">RESOURCES</span><br />
+
+                                Catalog<br />
+                                Career Resource Center<br />
+                                Career Services<br />
+                                Student Success<br />
+                                Udacity Talks<br />
+                                Scholarships<br />
+                                What is AI?</p>
+                            <p><span class="boldtext">COMPANY</span><br />
+
+                                About<br />
+                                Blog<br />
+                                In the News<br />
+                                Jobs at Udacity<br />
+                                Affiliates<br />
+                                Become an Instructor</p>
+                        </div>
+                        <div class="content5">
+                            <p><span class="boldtext">SUPPORT</span><br />
+
+                                Contact Us<br />
+                                Help and FAQ<br />
+                                Service Status<br />
+                                Tech Requirements</p>
+                        </div>
+
+                    </div>
+                    <div class="br"></div>
+                    <div class="policy">
+                        <div>© 2011–2021 Udacity, Inc.Legal & Privacy Site Map</div>
+                        <div>
+                            <img class="v" src="https://www.udacity.com/images/core/footer/footer-social/facebook.svg"
+                                alt="">
+                            <img class="v" src="https://www.udacity.com/images/core/footer/footer-social/twitter.svg">
+                            <img class="v" src="https://www.udacity.com/images/core/footer/footer-social/linkedin.svg">
+                            <img class="v" src="https://www.udacity.com/images/core/footer/footer-social/instagram.svg">
+                        </div>
+                    </div>
+                    <div class="end">
+                        <div class="end1">"Nanodegree" is a registered trademark of Udacity. © 2011–2021 Udacity, Inc.
+                        </div>
+                        <div class="end2">Udacity is not an accredited university and we don't confer traditional
+                            degrees.
+                            Udacity Nanodegree programs represent collaborations with our industry partners who help us
+                            develop our content and who hire many of our program graduates.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/data.js"></script>

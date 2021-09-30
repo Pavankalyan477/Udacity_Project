@@ -5,6 +5,9 @@ const connect = require("./configs/db");
 const courseController = require("./controllers/course.controller");
 const signupController = require("./controllers/signup.controller");
 const paymentController = require("./controllers/payment.controller");
+const orderController = require("./controllers/ordersdetail.controller");
+const signinController = require("./controllers/signin.controller");
+
 
 const app = express();
 app.use(express.json());
@@ -21,6 +24,8 @@ app.use(express.static("public"));
 app.use("/", courseController);
 app.use("/", signupController);
 app.use("/", paymentController);
+app.use("/", orderController);
+app.use("/", signinController);
 
 
 app.listen(3000, async () => {
