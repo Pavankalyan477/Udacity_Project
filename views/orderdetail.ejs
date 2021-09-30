@@ -35,16 +35,16 @@
                 </div>
                 <div class="firstrow">
                     <div>List Price</div>
-                    <div class="">$<%=order.cost%>USD</div>
+                    <div id="iniCost" class="">$<%=order.cost%> USD</div>
                 </div>
                 <div class="firstrow">
                     <div>15% Pre-paid Discount</div>
-                    <div class="colred">-$240 USD</div>
+                    <div id="discount" class="colred"></div>
                 </div>
                 <div class="line"></div>
                 <div class="total">
                     <div>Total</div>
-                    <div class="">$1,356 USD</div>
+                    <div id="total" class=""></div>
                 </div>
                 <div class="coupan">I have a coupon code</div>
                 <div class="btn2">
@@ -97,7 +97,12 @@
 
 </html>
 <script>
+    const cost = <%= order.cost%>;
+    document.getElementById("discount").innerHTML = `-$${Math.round(cost * .15)} USD`;
+    document.getElementById("total").innerHTML = `$${cost - Math.round(cost * .15)} USD`
     function trigger(link) {
         window.location.href = `/payment/${link}`;
     }
+
+
 </script>
