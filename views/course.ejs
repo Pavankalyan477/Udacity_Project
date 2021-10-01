@@ -18,7 +18,7 @@
                 <!-- <div class="ca3"><button onclick="buy('dataengineer')"><a class="am" href="">ENROLL
                             NOW</a></button> -->
                 <div class="ca3"><button>DOWNLOAD SYLLABUS</button><button
-                        onclick="buy(<%=JSON.stringify(course._id)%>)">ENROLL
+                        onclick="window.location.href=`#backimg`">ENROLL
                         NOW</button>
                 </div>
                 <div id="timer"></div>
@@ -194,7 +194,9 @@
                     <div class="boxcont1">
                         <div class="bor-for-box">
                             <div class="get-stat">GET STARTED WITH</div>
-                            <div class="full-stack">Data Engineer</div>
+                            <div class="full-stack">
+                                <%= course.Heading %>
+                            </div>
                             <div class="learn">
                                 <img
                                     src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/1xzMLXzq9MHC9kK9msyF1X/31bc93b2538c42e7b4f707e34cbbd2cc/book-open.svg">
@@ -209,7 +211,8 @@
                                     src="https://www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/1LzQygAn5VCT7CDcUV6ZG2/203d0b2416c97f58213d18051fd683e8/Clock.svg">
                                 <p>AVERAGE TIME</p>
                             </div>
-                            <div class="learn">On average, successful students take 4 months to complete this program.
+                            <div class="learn">On average, successful students take <%= course.Estimated_Time %> to
+                                    complete this program.
                             </div>
                             <div class="learn">
                                 <img
@@ -237,17 +240,19 @@
                         </div>
                         <div class="boxcont4">
                             <div class="boxcont4-bor">
-                                <div class="monfor">4 MONTHS ACCESS</div>
+                                <div class="monfor">
+                                    <%= course.Estimated_Time %> ACCESS
+                                </div>
                                 <div class="pricetag">
                                     <p class="bigger"><span>$<%= course.cost %></span><span class="smaller">$<%=
                                                 course.cost_per_month %> per month</span></p>
-                                    <button class="btn12"><a class="am" href="/">ENROLL
-                                            <button class="btn12"><a class="am" href="orderdetail.ejs">ENROLL
-                                                    NOW</a></button>
-                                            <div class="text25">
-                                                <p>Start learning today! Switch to the monthly</p>
-                                                <p>price afterwards if more time is needed.</p>
-                                            </div>
+                                    <!-- <button class="btn12"><a class="am" href="/">ENROLL -->
+                                    <button class="btn12" onclick="buy(<%=JSON.stringify(course._id)%>)">ENROLL
+                                        NOW</button>
+                                    <div class="text25">
+                                        <p>Start learning today! Switch to the monthly</p>
+                                        <p>price afterwards if more time is needed.</p>
+                                    </div>
                                 </div>
                             </div>
                             <hr />
@@ -263,9 +268,9 @@
                                 <div class="pricetag2">
                                     <p class="bigger2"><span>$<%= course.cost %></span><span class="smaller2">$<%=
                                                 course.cost_per_month %> per month</span></p>
-                                    <button class="btn13"><a class="am" href="/">ENROLL
-                                            <button class="btn13"><a class="am" href="orderdetail.ejs">ENROLL
-                                                    NOW</a></button>
+                                    <!-- <button class="btn13"><a class="am" href="/">ENROLL -->
+                                    <button class="btn13" onclick="buy(<%=JSON.stringify(course._id)%>)">ENROLL
+                                        NOW</button>
                                 </div>
                             </div>
                         </div>

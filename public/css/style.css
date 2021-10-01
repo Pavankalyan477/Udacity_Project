@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Open Sans',sans-serif;
     margin: 0px;
@@ -800,7 +803,7 @@ height:90%;
     margin-top: 20px;
     justify-content: center;
     letter-spacing: .125rem;
-
+    cursor: pointer;
 }
 .boxcont4{
     margin: auto;
@@ -832,6 +835,7 @@ height:90%;
     letter-spacing: .125rem;
     font-family: sans-serif;
     margin-top: 10px;
+    text-transform: uppercase;
 }
 .monfor2 {
     font-size: 14px;
@@ -872,6 +876,7 @@ height:90%;
     border-radius: 5px;
     justify-content: center;
     letter-spacing: .125rem;
+    cursor: pointer;
 }
 .btn13  {
     color: #fff;
@@ -884,6 +889,7 @@ height:90%;
     height: 40px;
     margin-top: 0px;
     font-weight: 600;
+    cursor: pointer;
     border-radius: 5px;
     justify-content: center;
     letter-spacing: .125rem;

@@ -184,3 +184,12 @@ float: left;
 span{
 float: left;
 }
+
+#funbtn2{
+    cursor: pointer;
+}
+#discount>img,
+#total>img{
+    margin-left: 50%;
+    width: 15%;
+}
