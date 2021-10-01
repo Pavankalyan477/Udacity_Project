@@ -16,6 +16,11 @@ router.get("/payment/:id", async (req, res) => {
     return res.render("payment.ejs", { payment });
 })
 
+//successful payments
+router.get("/success", async (req, res) => {
+    return res.render("success.ejs");
+})
+
 
 
 
