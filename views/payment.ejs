@@ -46,11 +46,11 @@
                 </div>
                 <div id="set-icon">
                     <label id="name">Card Data</label>
-                    <input type="number" id="nam" placeholder="Card Number" />
+                    <input type="name" id="nam" maxlength="19" placeholder="Card Number" />
                     <p id="err"></p>
-                    <input type="number" placeholder="month" id="mon">
-                    <input type="number" placeholder="year" id="year">
-                    <input type="number" placeholder="CVV" id="cvv">
+                    <input type="number" placeholder="month" maxlength="2" id="mon">
+                    <input type="number" placeholder="year" maxlength="2" id="year">
+                    <input type="password" placeholder="CVV" maxlength="3" id="cvv">
                 </div>
                 <div>
                     <label id="name">Country</label>
@@ -306,7 +306,7 @@
                 </div>
                 <div>
                     <label id="numb">Postal/Zip Code</label>
-                    <input type="number" id="zipcode">
+                    <input type="number" maxlength="6" id="zipcode">
                 </div>
                 <div class="btn">
                     <button id="funbtn" onclick="trigger()">Review Your Order</button>
@@ -328,7 +328,7 @@
         const postal = document.getElementById("zipcode").value;
 
         if (name != "" && card_data != "" && month != "" && year != "" && cvv != "" && country != "" && postal != "") {
-            window.location.href = `/myclassroom/get`;
+            window.location.href = `/success`;
         } else {
             alert("All fields are Mandatory!")
         }
@@ -339,13 +339,12 @@
         document.getElementById("animate").id = "";
     }, 2000);
 
+    let i = 0;
     document.getElementById("nam").addEventListener("input", () => {
         let data = document.getElementById("nam").value;
-        console.log(data.length);
-        if (data.length % 4 == 0) {
-            let news = data.toString() + " ";
-            console.log(news);
-            document.getElementById("nam").value = news;
+        i++;
+        if (i % 4 == 0) {
+            document.getElementById("nam").value = data + " ";
         }
     })
 </script>

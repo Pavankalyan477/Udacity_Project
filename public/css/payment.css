@@ -223,3 +223,24 @@ input {
 input{
     outline: none;
 }
+
+#funbtn {
+    cursor: pointer;
+}
+
+#layout{
+    width: 40%;
+    margin: auto;
+    margin-top: 12vw;
+}
+#image{
+    width: 40%;
+    margin: auto;
+}
+#image>img{
+    width: 100%;
+}
+#text{
+    font-family: 'Open Sans',sans-serif;
+    text-align: center;
+}
