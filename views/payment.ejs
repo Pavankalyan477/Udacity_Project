@@ -2,13 +2,17 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../css/payment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/payment.css">
 </head>
+
 <body>
+    <div id="animate"><img
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/ab79a231234507.564a1d23814ef.gif"></div>
     <div>
         <header>
             <div id="header">
@@ -17,14 +21,16 @@
         </header>
         <div id="cont">
             <div class="layconst">
-                <p><span>Get Started > </span><span>Orders Details ></span><span class="bold">Payment Method >
+                <p><span>Get Started > </span><span> Orders Details > </span><span class="bold">Payment Method >
                     </span><span>Review Your Order</span></p>
             </div>
             <div class="text1">
                 <h1>Payment Method</h1>
             </div>
             <div class="text2">
-                <h2 id="a"><%= payment.Heading_Banner %></h2>
+                <h2 id="a">
+                    <%= payment.Heading_Banner %>
+                </h2>
             </div>
             <div id="tabbar">
                 <button class="btn2">Card</button>
@@ -35,12 +41,12 @@
                 <div class="text3">Billing Information</div>
                 <div>
                     <label id="name">Name</label>
-                    <input type="text" id="nam1" placeholder="name"/>
+                    <input type="text" id="nam1" placeholder="name" />
                     <p id="nan"></p>
                 </div>
                 <div id="set-icon">
                     <label id="name">Card Data</label>
-                    <input type="number" id="nam" placeholder="Card Number"/>
+                    <input type="number" id="nam" placeholder="Card Number" />
                     <p id="err"></p>
                     <input type="number" placeholder="month" id="mon">
                     <input type="number" placeholder="year" id="year">
@@ -299,11 +305,11 @@
                     </select>
                 </div>
                 <div>
-                    <label id="numb">Postal/Zip Code <span>(optional)</span></label>
+                    <label id="numb">Postal/Zip Code</label>
                     <input type="number" id="zipcode">
                 </div>
                 <div class="btn">
-                    <button id="funbtn"><a class="am" href="/myclassroom/get">Review Your Order</a></button>
+                    <button id="funbtn" onclick="trigger()">Review Your Order</button>
                 </div>
             </div>
         </div>
@@ -312,8 +318,34 @@
 
 </html>
 <script>
-    //  function trigger() {
-    //     window.location.href = `/payment/${link}`;
-    // }
- 
+    function trigger() {
+        const name = document.getElementById("nam1").value;
+        const card_data = document.getElementById("nam").value;
+        const month = document.getElementById("mon").value;
+        const year = document.getElementById("year").value;
+        const cvv = document.getElementById("cvv").value;
+        const country = document.getElementById("country").value;
+        const postal = document.getElementById("zipcode").value;
+
+        if (name != "" && card_data != "" && month != "" && year != "" && cvv != "" && country != "" && postal != "") {
+            window.location.href = `/myclassroom/get`;
+        } else {
+            alert("All fields are Mandatory!")
+        }
+    }
+
+    setTimeout(() => {
+        document.getElementById("animate").innerHTML = "";
+        document.getElementById("animate").id = "";
+    }, 2000);
+
+    document.getElementById("nam").addEventListener("input", () => {
+        let data = document.getElementById("nam").value;
+        console.log(data.length);
+        if (data.length % 4 == 0) {
+            let news = data.toString() + " ";
+            console.log(news);
+            document.getElementById("nam").value = news;
+        }
+    })
 </script>

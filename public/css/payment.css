@@ -1,3 +1,13 @@
+#animate{
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.63);    
+}
+#animate>img{
+    margin:20% 48%;
+    width: 5%;
+}
 #header {
     height: 72px;
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
@@ -8,7 +18,7 @@
     background-color: #fff;
     display: flex;
     flex-direction: row;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
 }
 
 .img1 {
@@ -24,14 +34,14 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
 }
 
 .layconst {
     width: 650px;
     text-align: center;
     margin: auto;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 1rem;
     height: fit-content;
     margin-bottom: 40px;
@@ -51,14 +61,14 @@
     margin: auto;
     width: fit-content;
     margin-bottom: 1.5rem;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 12px;
 }
 
 .text2 {
     margin: auto;
     width: fit-content;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 12px;
 }
 
@@ -77,7 +87,7 @@
     margin-top: 10px;
     height: 50px;
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     margin-bottom: 15px;
     font-weight: 550;
     border: none;
@@ -93,7 +103,7 @@
     margin-top: 10px;
     height: 50px;
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     margin-bottom: 15px;
     font-weight: 550;
     border: none;
@@ -123,11 +133,11 @@
     font-weight: 550;
     text-align: left;
     margin-bottom: 25px;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
 }
 
 label {
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 18px;
     font-weight: 525;
 }
@@ -200,7 +210,7 @@ input {
     padding: 5px 30px;
     border: transparent;
     border-radius: 5px;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
 }
 
 .btn {
@@ -208,4 +218,8 @@ input {
     width: 190px;
     margin-top: 10px;
     /* border:1px solid black; */
+}
+
+input{
+    outline: none;
 }

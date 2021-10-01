@@ -98,8 +98,14 @@
 </html>
 <script>
     const cost = <%= order.cost%>;
-    document.getElementById("discount").innerHTML = `-$${Math.round(cost * .15)} USD`;
-    document.getElementById("total").innerHTML = `$${cost - Math.round(cost * .15)} USD`
+    document.getElementById("discount").innerHTML = "<img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif'>";
+    document.getElementById("total").innerHTML = "<img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif'>";
+    setTimeout(() => {
+        document.getElementById("discount").innerHTML = `-$${Math.round(cost * .15)} USD`;
+        document.getElementById("total").innerHTML = `$${cost - Math.round(cost * .15)} USD`;
+    }, 3000);
+    // document.getElementById("discount").innerHTML = `-$${Math.round(cost * .15)} USD`;
+    // document.getElementById("total").innerHTML = `$${cost - Math.round(cost * .15)} USD`;
     function trigger(link) {
         window.location.href = `/payment/${link}`;
     }
