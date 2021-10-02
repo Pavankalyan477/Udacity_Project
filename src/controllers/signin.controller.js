@@ -26,10 +26,16 @@ router.post('/signin', async (req, res) => {
         const password = req.body.pass;
         const sign = await Signup.findOne({ Email_Address: email });
         if (sign.Password === password) {
+<<<<<<< HEAD
             res.status(201).render("classroom.ejs",{user:" "});
         } else {
             //var out=[{'name':'wrong password'}]
             res.render('signup',{user:"Password is Incorrect"})
+=======
+            res.status(201).render("classroom.ejs");
+        } else {
+            res.send("Password is incorrect")
+>>>>>>> 79401f3c09df61fba5eadc43bd65be9145a7db7c
         }
         console.log(sign)
     } catch (error) {

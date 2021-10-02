@@ -3,28 +3,29 @@
   }
   
   body {
+
+    margin: 0px;
     background: rgb(255, 254, 254);
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     text-align: center;
     -webkit-font-smoothing: antialiased
   }
   
   .form {
-    width: 700px;
+    width: 45%;
     background: rgb(250, 247, 247);
     box-shadow:0 2px 8px 0 rgb(0 0 0 / 30%);
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    /* transform: translate(-50%, -40%); */
    margin: auto;
+   margin-bottom: 3%;
   }
   
   .form .tab-header {
     height: 50px;
     line-height: 50px;
-    border: 1px solid #555;
+    /* border: 1px solid #555; */
   }
   
   .form .tab-header>div {
@@ -34,11 +35,16 @@
     background: #ddd;
     color: #555;
     cursor: pointer;
+    font-size: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.452);
   }
   
   .form .tab-header>div.active {
     background: #f5f5f5;
     color: #111;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
   }
   
   .form .tab-content {
@@ -93,17 +99,14 @@
   #header2 {
     height: 75px;
     box-shadow:0 2px 8px 0 rgb(0 0 0 / 20%);
-    margin: 0 0 32px;
-    margin-top: 0px;
     width:100%;
     align-items: center;
     justify-content: center;
     background-color: #fff;
     display: flex;
     flex-direction: row;
-    font-family: sans-serif;
-    margin-bottom: 25%;
-    margin-top: -10px;
+    font-family: 'Open Sans',sans-serif;
+    margin-bottom: 40px;
   }
   .img1 {
   width: 15%;
@@ -118,9 +121,23 @@
   }
   button{
     padding: 2px;
-    width: 30%;
+    width: 40%;
     border-radius: 5px;
-   
+    outline: none;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 1px 3px gray;
+    cursor: pointer;
+    border-radius: 1px;
+  }
+
+  .terms{
+    font-size: 14px;
+  }
+  .terms>span{
+    font-weight: 500;
+    color: #017a9b;
+    cursor: pointer;
   }
   
   
@@ -154,7 +171,12 @@
     width: 100%;
   }
   .title{
-    font-family: sans-serif;
-    font-size: 50px;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 44px;
     font-weight: lighter;
+  }
+
+  .forget{
+    color: #017a9b;
+    cursor: pointer;
   }
