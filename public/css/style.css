@@ -1281,3 +1281,7 @@ border-top-left-radius: 10px;;
 }.imgstyle2 {
     margin-top: 12%; margin-bottom: 10%;
 }
+button a{
+    text-decoration: none;
+    color: white;
+}
