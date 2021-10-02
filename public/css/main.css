@@ -1,9 +1,12 @@
+body{
+    font-family: 'Open Sans',sans-serif;
+}
 #remove{
     margin:auto;
     text-align:center;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
 }
 .udacity{
     height:8%;
@@ -28,7 +31,7 @@
     width:30%;
     
     margin-left:2%;
-    font-family:sans-serif;
+    font-family: 'Open Sans',sans-serif;
     margin-top:2%;
     font-size:20px;
 }
@@ -63,8 +66,20 @@
     margin-left:1%;
     margin-top:2%;
     float:left;
-    font-family:sans-serif;
+    font-family: 'Open Sans',sans-serif;
 }
+.c31{
+    margin-right: 3%;
+    margin-top: 2%;
+    float: right;
+    width: 3%;
+    height: auto;
+    cursor: pointer;
+}
+.c31>img{
+    width: 100%;
+}
+
 .c4{
     height:50%;
     width:55%;
@@ -72,12 +87,12 @@
     margin-left:1%;
     float:left;
     line-height:1.6;
-    font-family:sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size:13px;
 }
 .c5{
     float:right;
-    margin-right:1%;
+    margin-right:-4%;
     height:24%;
     width:11%;
     margin-top:3%;
