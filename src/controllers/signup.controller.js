@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get("/signup", async (req, res) => {
-    const signup = await Signup.find();
+    const signup = await Signup.find().lean().exec();
     return res.status(200).send({ signup });
 })
 
@@ -14,14 +14,14 @@ router.get("/signup", async (req, res) => {
 router.get("/signup/get", async (req, res) => {
     const signup = await Signup.find().lean().exec();
     //console.log("sign",signup)
-    return res.render('../views/signup.ejs',{
-        signup:signup
+    return res.render('../views/signup.ejs', {
+        signup: signup
     })
 })
 router.post("/signup", async (req, res) => {
-    const signup = await Signup({First_Name: req.body.First_Name, Last_Name: req.body.Last_Name,Email_Address: req.body.mail, Password: req.body.pass});
-    signup.save(function(err) {
-        if(err) {
+    const signup = await Signup({ First_Name: req.body.First_Name, Last_Name: req.body.Last_Name, Email_Address: req.body.mail, Password: req.body.pass });
+    signup.save(function (err) {
+        if (err) {
             console.log("Something went wrong");
         }
         else {
@@ -29,9 +29,9 @@ router.post("/signup", async (req, res) => {
             res.redirect("/signup/get");
         }
     });
-   // console.log("sign",signup)
+    // console.log("sign",signup)
     //res.redirect("/")
-   // return res.status(201).send({ signup });
+    // return res.status(201).send({ signup });
 })
 
 

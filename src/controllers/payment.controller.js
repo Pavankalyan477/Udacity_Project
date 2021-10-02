@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const Payment = require("../models/payment.model");
 const Course = require("../models/course.model")
+const Myclassroom = require("../models/myclassroom.model")
 
 const router = express.Router();
 
@@ -12,8 +13,9 @@ router.get("/payment", async (req, res) => {
 
 
 router.get("/payment/:id", async (req, res) => {
-    const payment = await Course.findById(req.params.id);
-    return res.render("payment.ejs", { payment });
+    const payment = await Course.findById(req.params.id).lean().exec();
+    const classroom = await Myclassroom.create(payment);
+    return res.render("payment.ejs", { payment, classroom });
 })
 
 //successful payments

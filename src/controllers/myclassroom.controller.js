@@ -20,14 +20,21 @@ router.get("/myclassroom/get", async (req, res) => {
 //creating api for index page view
 router.get("/myclassroom/get", async (req, res) => {
     const myclassroom = await Myclassroom.find().lean().exec();
-    return res.render('myclassroom.ejs',{
-        myclassroom:myclassroom
+    return res.render('myclassroom.ejs', {
+        myclassroom: myclassroom
     })
 })
 
 router.post("/myclassroom", async (req, res) => {
     const myclassroom = await Myclassroom.create(req.body);
-   return res.status(201).send({ myclassroom })
-    });
+    return res.status(201).send({ myclassroom })
+});
+
+//deletion
+router.delete("/myclassroom/:id", async (req, res) => {
+    const selectedCourses = await Myclassroom.findByIdAndDelete(req.params.id);
+    return res.status(200).send({ selectedCourses });
+})
+
 
 module.exports = router
