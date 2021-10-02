@@ -99,6 +99,8 @@
           <div class="form-element">
             <input type="password" id="pass" placeholder="Password" required name="pass">
           </div>
+          <div role="alert" style="color: red;">{{{user}}}</div>
+
           <p>By clicking Sign in, you agree to our Terms of Use and our Privacy Policy.</p>
           <div class="form-element">
             <button class="btn1" type="submit">Sign In</button>
@@ -115,7 +117,7 @@
 </body>
 
 </html>
-<script>
+<script type="module">
   let tabPanes = document.getElementsByClassName("tab-header")[0].getElementsByTagName("div");
 
   for (let i = 0; i < tabPanes.length; i++) {
@@ -127,4 +129,8 @@
       document.getElementsByClassName("tab-content")[0].getElementsByClassName("tab-body")[i].classList.add("active");
     });
   }
+
+
+  const Signup = require("../models/signup.model");
+
 </script>

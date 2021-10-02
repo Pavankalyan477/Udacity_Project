@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const Signup = require("../models/signup.model");
 const Signin = require("../models/signin.model");
+const signupModel = require("../models/signup.model");
 
 
 const router = express.Router();
@@ -16,18 +17,19 @@ const router = express.Router();
 router.get("/signin/get", async (req, res) => {
     //const signin = await Signin.find().lean().exec();
     //console.log("sign",signin)
-    return res.render('../views/signup.ejs')
+    return res.render('signup.hbs')
 })
 
 router.post('/signin', async (req, res) => {
     try {
-        const email=req.body.mail;
-        const password=req.body.pass;
-        const sign= await Signup.findOne({Email_Address:email});
-        if(sign.Password===password){
-            res.status(201).render("classroom.ejs");
-        }else{
-            res.send("Password is incorrect")
+        const email = req.body.mail;
+        const password = req.body.pass;
+        const sign = await Signup.findOne({ Email_Address: email });
+        if (sign.Password === password) {
+            res.status(201).render("classroom.ejs",{user:" "});
+        } else {
+            //var out=[{'name':'wrong password'}]
+            res.render('signup',{user:"Password is Incorrect"})
         }
         console.log(sign)
     } catch (error) {
