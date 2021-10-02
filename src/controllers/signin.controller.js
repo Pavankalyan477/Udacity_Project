@@ -21,12 +21,12 @@ router.get("/signin/get", async (req, res) => {
 
 router.post('/signin', async (req, res) => {
     try {
-        const email=req.body.mail;
-        const password=req.body.pass;
-        const sign= await Signup.findOne({Email_Address:email});
-        if(sign.Password===password){
+        const email = req.body.mail;
+        const password = req.body.pass;
+        const sign = await Signup.findOne({ Email_Address: email });
+        if (sign.Password === password) {
             res.status(201).render("classroom.ejs");
-        }else{
+        } else {
             res.send("Password is incorrect")
         }
         console.log(sign)

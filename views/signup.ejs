@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,11 +24,9 @@
       <form action="/signup" method="POST" id="data">
         <div class="tab-content">
           <div class="tab-body active">
-            <p class="title">Create Your Accout</p>
-            <p>Build skills for today, tomorrow, and beyond.
-              <br>
-              <br>
-              Education to future-proof your career.
+            <p class="title">Create Your Account</p>
+            <p id="para_data">Build skills for today, tomorrow, and beyond.</p>
+            <p>Education to future-proof your career.
             </p>
             <br>
             <div>
@@ -43,25 +42,26 @@
                   Facebook</p>
               </button>
             </div>
-            <h4>Or</h4>
+            <h5>Or</h5>
 
             <div class="form-element">
-              <input type="text" id="first" placeholder="First_Name" required name="First_Name">
+              <input type="text" id="first" placeholder="First Name" required name="First_Name">
               <p id="mess"></p>
             </div>
             <div class="form-element">
-              <input type="text" id="last" placeholder="Last_Name" required name="Last_Name">
+              <input type="text" id="last" placeholder="Last Name" required name="Last_Name">
               <p id="mess1"></p>
             </div>
             <div class="form-element">
-              <input type="email" id="mail" placeholder="Email_Address" required name="mail">
+              <input type="email" id="mail" placeholder="Email Address" required name="mail">
               <p id="mess2"></p>
             </div>
             <div class="form-element">
               <input type="password" id="pswd" placeholder="Password" required name="pass">
               <p id="mess3"></p>
             </div>
-            <p>By clicking Sign Up, you agree to our Terms of Use and our Privacy Policy.</p>
+            <p class="terms">By clicking Sign Up, you agree to our <span>Terms of Use</span> and our <span>Privacy
+                Policy.</span></p>
             <div id="continue" class="form-element">
               <!-- <input  class="btn1" type="submit" value="Sign Up"> -->
               <button class="btn1" type="submit">SIGNUP</button>
@@ -72,45 +72,46 @@
 
       <form id="data1"></form>
       <!-- <form action="/signin" method="POST" id="data1"> -->
-        <div class="tab-body">
-          <p class="title">Sign in to Your Accout</p>
-          <p>Build skills for today, tomorrow, and beyond.<br><br>Education to future-proof your career.</p>
-          <br>
-          <div>
-            <button class="btn2"><img src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" />
-              <p>Sign Up
-                with
-                Google </p>
-            </button>
-            <button class="btn2"><img src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" />
-              <p>Sign
-                Up
-                with
-                Facebook</p>
-            </button>
-          </div>
-          <br>
-          <h4>Or</h4>
-          <br>
-          <form  action="/signin" method="POST"  >
+      <div class="tab-body">
+        <p class="title">Sign in to Your Account</p>
+        <p>Build skills for today, tomorrow, and beyond.</p>
+        <p>Education to future-proof your career.</p>
+        <br>
+        <div>
+          <button class="btn2"><img src="https://pluspng.com/img-png/google-photos-logo-png-google-400.png" />
+            <p>Sign Up
+              with
+              Google </p>
+          </button>
+          <button class="btn2"><img src="https://www.iphonehacks.com/wp-content/uploads/2013/02/facebook.png" />
+            <p>Sign
+              Up
+              with
+              Facebook</p>
+          </button>
+        </div>
+
+        <h5>Or</h5>
+        <form action="/signin" method="POST">
           <div class="form-element">
             <input id="email" type="text" placeholder="Email Address" required name="mail">
           </div>
           <div class="form-element">
             <input type="password" id="pass" placeholder="Password" required name="pass">
           </div>
-          <p>By clicking Sign in, you agree to our Terms of Use and our Privacy Policy.</p>
+          <p class="terms">By clicking Sign in, you agree to our <span>Terms of Use</span> and our <span>Privacy
+              Policy.</span></p>
           <div class="form-element">
             <button class="btn1" type="submit">Sign In</button>
           </div>
-          <p>Forgot Password</p>
-          <h4>Or</h4>
-          <p>Sign in with Your Organization</p>
+          <p class="forget">Forgot Your Password?</p>
+          <h5>Or</h5>
+          <p class="forget">Sign in with Your Organization</p>
           <div id="signedin"></div>
         </form>
-        </div>
+      </div>
     </div>
-    
+
   </div>
 </body>
 
