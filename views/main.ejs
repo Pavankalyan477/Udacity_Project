@@ -1,7 +1,7 @@
 <html>
 
 <head>
-
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <title>PURCHASED COURSES</title>
 
 </head>
@@ -18,10 +18,13 @@
                     <img class="c21" src="<%= element.image %> ">
                 </div>
                 <div class="c3">
-                    <%= element.Heading %>
+                    <%= element.Heading_Banner %>
+                </div>
+                <div class="c31" onclick="remove(<%= JSON.stringify(element._id)%>)"><img
+                        src="https://mpng.subpng.com/20190612/uf/kisspng-computer-icons-clip-art-portable-network-graphics-delete-logo-png-vector-clipart-psd-peoplepng-c-5d0186f9b534f8.7792337815603811777422.jpg">
                 </div>
                 <div class="c4">
-                    <%= element.des %>
+                    <%= element.Description_Banner %>
                 </div>
                 <a class="c5" href="">Watch</a>
             </div>
@@ -30,7 +33,7 @@
     </div>
 </body>
 
-<script src="../scripts/main.js">
+<script src="../js/main.js">
 
 </script>
 

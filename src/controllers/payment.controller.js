@@ -14,8 +14,11 @@ router.get("/payment", async (req, res) => {
 
 router.get("/payment/:id", async (req, res) => {
     const payment = await Course.findById(req.params.id).lean().exec();
-    const classroom = await Myclassroom.create(payment);
-    return res.render("payment.ejs", { payment, classroom });
+    let classroom = await Myclassroom.findById(req.params.id).lean().exec();
+    if (classroom == null) {
+        classroom = await Myclassroom.create(payment);
+        return res.render("payment.ejs", { payment, classroom });
+    }
 })
 
 //successful payments
