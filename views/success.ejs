@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+
+<body>
+    <div id="layout">
+        <div id="image">Hello</div>
+        <div id="text">Please Wait... Processing Payment</div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.getElementById("image").innerHTML = "<img src='https://i.pinimg.com/originals/43/3b/6c/433b6c5336c72a21bcfd9db8d831562a.gif'>";
+    setTimeout(() => {
+        document.getElementById("image").innerHTML = "<img src='https://cdn.dribbble.com/users/147386/screenshots/5315437/success-tick-dribbble.gif'>";
+        document.getElementById("text").innerHTML = "Payment successful!";
+    }, 3000);
+    setTimeout(() => {
+        window.location.href = "/myclassroom/get";
+    }, 5000);
+</script>

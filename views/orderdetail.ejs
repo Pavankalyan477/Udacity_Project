@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/orderdetail.css">
+</head>
+
+<body>
+    <div id="whole">
+        <div id="header2">
+            <img src="https://payment.udacity.com/static/media/logo.ccbc74e4.svg" alt="udacity" class="img1" />
+        </div>
+        <div id="ordet">
+            <div class="layconst2">
+                <p><span>Get Started </span><span class="bold"> >Orders Details</span><span>> Payment
+                        Method</span><span>> Review Your Order</span></p>
+            </div>
+            <div id="content">
+                <div class="text4">
+                    <h1>Order Details</h1>
+                </div>
+                <div class="text5">
+                    <h2>
+                        <%= order.Heading_Banner %>
+                    </h2>
+                </div>
+                <div class="text6">
+                    <h2>
+                        <%= order.Estimated_Time %>
+                    </h2>
+                </div>
+                <div class="firstrow">
+                    <div>List Price</div>
+                    <div id="iniCost" class="">$<%=order.cost%> USD</div>
+                </div>
+                <div class="firstrow">
+                    <div>15% Pre-paid Discount</div>
+                    <div id="discount" class="colred"></div>
+                </div>
+                <div class="line"></div>
+                <div class="total">
+                    <div>Total</div>
+                    <div id="total" class=""></div>
+                </div>
+                <div class="coupan">I have a coupon code</div>
+                <div class="btn2">
+                    <button id="funbtn2" onclick="trigger(<%=JSON.stringify(order._id)%>)">Review Your Order</button>
+                </div>
+            </div>
+            <div class="cont1">
+                <div class="text-content">
+                    <h3>Get the Udacity Difference</h3>
+                    <h4>Only Udacity has all the critical factors to deliver real results.</h4>
+                </div>
+                <div id="allboxes">
+                    <div>
+                        <div class="box">
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/blue-brain.9cb5e856.svg"></div>
+                            <span>Quality curriculum teaches real,<br /> employable skills</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/green-head.3f52df58.svg"></div>
+                            <span>Flexible, online platform lets you<br /> learn on your schedule</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/red-console.b6824ed5.svg"></div>
+                            <span>Real-world projects offer active,<br />hands-on learning
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="imgres"><img
+                                    src="https://payment.udacity.com/static/media/purple-career.673cbaea.svg"></div>
+                            <span>24/7 access to technical mentors<br /> provides the help you need,<br /> when you need
+                                it</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const cost = <%=order.cost%>;
+    document.getElementById("discount").innerHTML = "<img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif'>";
+    document.getElementById("total").innerHTML = "<img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif'>";
+    setTimeout(() => {
+        document.getElementById("discount").innerHTML = `-$${Math.round(cost * .15)} USD`;
+        document.getElementById("total").innerHTML = `$${cost - Math.round(cost * .15)} USD`;
+    }, 3000);
+    // document.getElementById("discount").innerHTML = `-$${Math.round(cost * .15)} USD`;
+    // document.getElementById("total").innerHTML = `$${cost - Math.round(cost * .15)} USD`;
+    function trigger(link) {
+        window.location.href = `/payment/${link}`;
+    }
+
+
+</script>
