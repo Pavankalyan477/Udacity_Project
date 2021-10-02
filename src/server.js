@@ -16,7 +16,7 @@ app.use(express.json());
 
 
 var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded( {extended: true} ));
+app.use(bodyParser.urlencoded({ extended: true }));
 //setting view engine
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -31,7 +31,6 @@ app.use("/", orderController);
 app.use("/", signinController);
 app.use("/", myclassController);
 app.use("/", mainController);
-
 
 
 app.listen(3000, async () => {

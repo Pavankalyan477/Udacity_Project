@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+    <title>PURCHASED COURSES</title>
+
+</head>
+<link rel="stylesheet" href="../css/main.css">
+
+<body>
+
+    <div class="udacity"><a href="/"><img src="https://payment.udacity.com/static/media/logo.ccbc74e4.svg" /></a></div>
+    <div class="b1">
+        <div class="b2">Your courses</div>
+        <% selectedCourses.forEach(element=> { %>
+            <div class="c1">
+                <div class="c2">
+                    <img class="c21" src="<%= element.image %> ">
+                </div>
+                <div class="c3">
+                    <%= element.Heading %>
+                </div>
+                <div class="c4">
+                    <%= element.des %>
+                </div>
+                <a class="c5" href="">Watch</a>
+            </div>
+            <% }); %>
+
+    </div>
+</body>
+
+<script src="../scripts/main.js">
+
+</script>
+
+</html>
