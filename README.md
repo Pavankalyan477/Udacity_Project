@@ -58,7 +58,7 @@ This project is a complete clone UI of the Udacity website with the functionalit
 
 ## Team Members 
 <ul>
-  <li>Ramendra Vikram Singh Parihar</li>
-  <li>Pavan Kalyan</li>
-  <li>Vijay Kumar Singh</li>
+  <li>Ramendra Vikram Singh Parihar  https://github.com/rv-vikram</li>
+  <li>Pavan Kalyan   https://github.com/Pavankalyan477</li>
+  <li>Vijay Kumar Singh   https://github.com/singhvijay29</li>
 </ul>
