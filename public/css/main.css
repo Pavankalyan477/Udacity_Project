@@ -21,26 +21,26 @@ body{
     height:70%;
     width:80%;
     border-radius:10px;
-    
     margin-top:5%;
     margin-left:10%;
 
 }
 .b2{
     height:8%;
-    width:30%;
-    
+    width:25%;
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 3%;
     margin-left:2%;
     font-family: 'Open Sans',sans-serif;
-    margin-top:2%;
-    font-size:20px;
+    margin-top: -4%;
 }
 .c1{
-    height:25%;
+    height:28%;
     margin-top:1%;
     width:80%;
     margin-bottom:2%;
-    margin-left:10%;
+    margin-left:8%;
     border-radius:10px;
     box-shadow:-2px -2px 2px 2px lightgray,2px 2px 2px 2px lightgray;
     
@@ -92,10 +92,11 @@ body{
 }
 .c5{
     float:right;
-    margin-right:-4%;
     height:24%;
     width:11%;
-    margin-top:3%;
+
+    margin-right: 2%;
+    margin-top:2%;
     color:white;
     background-color:teal;
     text-decoration:none;
