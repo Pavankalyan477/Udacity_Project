@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="https://www.udacity.com/favicon.ico">
+
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,3 +97,10 @@
 </body>
 
 </html>
+
+<script>
+    var x = JSON.parse(localStorage.getItem("sign"));
+    x.status = false;
+    x.email = "";
+    localStorage.setItem("sign", JSON.stringify(x));
+</script>
