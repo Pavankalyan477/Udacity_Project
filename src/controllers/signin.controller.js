@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const Signup = require("../models/signup.model");
 const Signin = require("../models/signin.model");
+const signupModel = require("../models/signup.model");
 
 
 const router = express.Router();

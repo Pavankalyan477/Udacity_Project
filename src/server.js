@@ -9,6 +9,8 @@ const orderController = require("./controllers/ordersdetail.controller");
 const signinController = require("./controllers/signin.controller");
 const myclassController = require("./controllers/myclassroom.controller");
 const mainController = require("./controllers/main.controller");
+const course1Controller = require("./controllers/course1.controller");
+
 
 
 const app = express();
@@ -19,6 +21,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 //setting view engine
 app.set("view engine", "ejs");
+app.set("view engine", "hbs");
 app.use(express.static("public"));
 
 
@@ -31,6 +34,7 @@ app.use("/", orderController);
 app.use("/", signinController);
 app.use("/", myclassController);
 app.use("/", mainController);
+app.use("/", course1Controller);
 
 
 app.listen(3000, async () => {

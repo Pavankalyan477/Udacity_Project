@@ -13,7 +13,7 @@ router.get("/signup", async (req, res) => {
 router.get("/signup/get", async (req, res) => {
     const signup = await Signup.find().lean().exec();
     //console.log("sign",signup)
-    return res.render('../views/signup.ejs', {
+    return res.render('../views/signup.hbs', {
         signup: signup
     })
 })
