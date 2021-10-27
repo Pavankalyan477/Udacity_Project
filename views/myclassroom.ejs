@@ -31,8 +31,9 @@
         <div class="bottombar">
             <div class="imgbot"><img src="https://www.urbanthreads.com/productImages/regularSize/UTH6005.jpg">Setting
             </div>
-            <div class="imgbot"><img src="https://image.flaticon.com/icons/png/512/154/154348.png"><a class="am"
-                    href="/">Logout</a></div>
+            <button id="checkOnce" onclick="checkOnce()">
+                <div class="imgbot"><img src="https://image.flaticon.com/icons/png/512/154/154348.png">Logout</div>
+            </button>
         </div>
     </div>
     <div id="whole-cont">
@@ -53,7 +54,7 @@
                         build production-ready data infrastructure, an essential skill for advancing your data career.
                     </p>
                 </div>
-                <div class="btn22"><a href="/course1/6153f3ff23139d8a2432d587">LEARN MORE</a></div>
+                <div class="btn22"><a href="/course/6153f3ff23139d8a2432d587">LEARN MORE</a></div>
             </div>
             <div class="lec">
                 <div><img
@@ -64,7 +65,7 @@
                     <p class="descrip">Learn to design and develop powerful modern web applications that form the
                         foundation for the apps, websites, and systems that people and businesses use every day.</p>
                 </div>
-                <div class="btn22"><a href="/course1/6154680095ae88fdea0bc9e0">LEARN MORE</a></div>
+                <div class="btn22"><a href="/course/6154680095ae88fdea0bc9e0">LEARN MORE</a></div>
             </div>
             <div class="lec">
                 <div><img
@@ -76,7 +77,7 @@
                         to successfully bring them to market.
                         Influence the execution of product development as a Product Manager.</p>
                 </div>
-                <div class="btn22"><a href="/course1/6154680095ae88fdea0bc9e1">LEARN MORE</a></div>
+                <div class="btn22"><a href="/course/6154680095ae88fdea0bc9e1">LEARN MORE</a></div>
             </div>
             <div class="lec">
                 <div><img
@@ -89,7 +90,7 @@
                         Enable enhanced medical decision-making powered by machine learning to build the treatments of
                         the future.</p>
                 </div>
-                <div class="btn22"><a href="/course1/6154680095ae88fdea0bc9e2">LEARN MORE</a></div>
+                <div class="btn22"><a href="/course/6154680095ae88fdea0bc9e2">LEARN MORE</a></div>
             </div>
 
         </div>
@@ -99,8 +100,11 @@
 </html>
 
 <script>
-    var x = JSON.parse(localStorage.getItem("sign"));
-    x.status = false;
-    x.email = "";
-    localStorage.setItem("sign", JSON.stringify(x));
+    function checkOnce() {
+        var x = JSON.parse(localStorage.getItem("sign"));
+        x.status = false;
+        x.email = "";
+        localStorage.setItem("sign", JSON.stringify(x));
+        window.location.href = "/";
+    }
 </script>
