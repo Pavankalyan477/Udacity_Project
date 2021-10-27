@@ -5,7 +5,7 @@ This project is a complete clone UI of the Udacity website with the functionalit
 <ul>
   <li>Clone the repo and run the app.</li>
   <ul>
-    <li>https://github.com/Pavankalyan477/Constructor_Week_Project_2.git</li>
+    <li>https://github.com/Pavankalyan477/Udacity_Project</li>
     <li>cd Constructor_Week_Project_2</li>
     <li>Execute `npm run server` command in your CLI, and enjoy exploring different technical courses on the go. Happy Learning!</li>
   </ul>
