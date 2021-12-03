@@ -1,4 +1,3 @@
-const mongoose = require("mongoose");
 const express = require("express");
 const Signup = require("../models/signup.model");
 
@@ -25,13 +24,13 @@ router.post("/signup", async (req, res) => {
             console.log("Something went wrong");
         }
         else {
+            let datalog = {
+                error: ""
+            }
             console.log("Successfully added a user");
-            res.redirect("/signup/get");
+            res.render("signup.ejs", { datalog });
         }
     });
-    // console.log("sign",signup)
-    //res.redirect("/")
-    // return res.status(201).send({ signup });
 })
 
 

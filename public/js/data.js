@@ -1,9 +1,14 @@
 function buy(a) {
-    window.location.href = `/course/${a}/order`;
+    if (x.status == false) {
+        alert("Please Sign in first!")
+    } else {
+        window.location.href = `/course/${a}/order`;
+
+    }
 }
 
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 6, 2021 00:00:00").getTime();
+var countDownDate = new Date("Dec 6, 2021 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -24,3 +29,11 @@ var x = setInterval(function () {
     document.getElementById("timer").innerHTML = "Register Before: " + days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
 }, 1000);
+
+var x = JSON.parse(localStorage.getItem("sign"));
+
+if (x.status == true) {
+    document.getElementById("checkSign").innerHTML = "MY CLASSROOM";
+    document.getElementById("checkSign").href = "/myclassroom/get";
+
+}

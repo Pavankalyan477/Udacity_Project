@@ -143,6 +143,9 @@ body{
     height:100%;
     width:23%;
     border:none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.5 ease-in-out;
 }
 
 .m{

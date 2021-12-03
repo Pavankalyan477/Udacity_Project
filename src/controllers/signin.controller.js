@@ -14,10 +14,11 @@ const router = express.Router();
 // })
 
 //creating api for index page view
-router.get("/signin/get", async (req, res) => {
-    //const signin = await Signin.find().lean().exec();
-    //console.log("sign",signin)
-    return res.render('signup.hbs')
+router.get("/signinPage", async (req, res) => {
+    let datalog = {
+        error: ""
+    }
+    return res.render('../views/signup.ejs', { datalog });
 })
 
 router.post('/signin', async (req, res) => {
@@ -26,13 +27,17 @@ router.post('/signin', async (req, res) => {
         const password = req.body.pass;
         const sign = await Signup.findOne({ Email_Address: email });
         if (sign.Password === password) {
-            res.status(201).render("classroom.ejs");
+
+            res.status(201).render("index.ejs");
         } else {
-            res.send("Password is incorrect")
+            let datalog = {
+                "error": "Invalid Email/Password. Please try again"
+            }
+            res.render("signup.ejs", { datalog })
         }
         console.log(sign)
     } catch (error) {
-        res.status(400).send("Invalid details")
+        res.status(400).send(error)
     }
 })
 
