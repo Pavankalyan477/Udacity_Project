@@ -105,7 +105,7 @@
 
 </html>
 <script>
-    const cost = <%=order.cost%>;
+    const cost = <%- order.cost%>;
     document.getElementById("discount").innerHTML = "<img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif'>";
     document.getElementById("total").innerHTML = "<img src='https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif'>";
     setTimeout(() => {
